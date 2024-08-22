@@ -11,13 +11,15 @@ import {
   MobileLink,
   GitHubButton,
   ButtonContainer,
+  NavItem,
 } from "./NavbarStyledComponent";
 import { FaBars } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 import { useTheme } from "styled-components";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme();
   return (
     <Nav>
       <NavbarContainer>
@@ -45,15 +47,25 @@ const Navbar = () => {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Support</NavLink>
           <NavLink href="#experience">Stores</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
         </NavItems>
+        <NavItem>
+          <NavLink href="#projects" style={{ color: "#29abaf" }}>
+            Login
+          </NavLink>{" "}
+          |
+          <NavLink style={{ color: "#29abaf" }} href="#education">
+            Register
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <FaShoppingCart style={{ color: "white" }} />
+        </NavItem>
         <ButtonContainer>
-          <GitHubButton
-            //   href={Bio.github}
-            target="_blank"
-          >
-            Github Profile
+          <GitHubButton>
+            <FaLocationDot
+              style={{ margin: "0px 5px 0px 0px", color: "#29abaf" }}
+            />
+            Find your store{" "}
           </GitHubButton>
         </ButtonContainer>
         {isOpen && (
@@ -101,12 +113,9 @@ const Navbar = () => {
             <GitHubButton
               style={{
                 padding: "10px 16px",
-                background: `${theme.primary}`,
                 color: "white",
                 width: "max-content",
               }}
-              //   href={Bio.github}
-              target="_blank"
             >
               Find your store{" "}
             </GitHubButton>

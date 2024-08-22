@@ -18,7 +18,7 @@ export const Nav = styled.div`
 `;
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 60px;
   z-index: 1;
@@ -31,7 +31,7 @@ export const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   @media (max-width: 640px) {
@@ -40,18 +40,30 @@ export const NavLogo = styled(LinkR)`
 `;
 export const Span = styled.div`
   padding: 0 4px;
-  font-weight: bold;
   font-size: 18px;
 `;
 export const NavItems = styled.ul`
-  width: 100%;
+  width: 150%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 32px;
   padding: 0 6px;
   list-style: none;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
+export const NavItem = styled.ul`
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #838f8f;
+  padding: 0 6px;
+  list-style: none;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -79,24 +91,20 @@ export const GitHubButton = styled.a`
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: #8a8584;
   cursor: pointer;
   padding: 0 20px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   font-size: 16px;
-  transition: all 0.6s ease-in-out;
-  :hover {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.white};
-  }
+  background-color: #ffffff;
   @media screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;
 
 export const ButtonContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: end;

@@ -29,7 +29,7 @@ const Logo = styled.h1`
   color: ${({ theme }) => theme.primary};
 `;
 
-const Nav = styled.nav`
+const FooterCon = styled.nav`
   width: 100%;
   max-width: 800px;
   margin-top: 0.5rem;
@@ -46,32 +46,12 @@ const Nav = styled.nav`
   }
 `;
 
-const NavLink = styled.a`
+const FooterSubContainer = styled.a`
   color: ${({ theme }) => theme.text_primary};
   text-decoration: none;
-  font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
   @media (max-width: 768px) {
     font-size: 1rem;
-  }
-`;
-
-const SocialMediaIcons = styled.div`
-  display: flex;
-  margin-top: 1rem;
-`;
-
-const SocialMediaIcon = styled.a`
-  display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.text_primary};
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
   }
 `;
 
@@ -84,32 +64,60 @@ const Copyright = styled.p`
 
 function Footer() {
   return (
-    <FooterContainer>
-      <FooterWrapper>
-        <Logo>Ruchita Sagalgile</Logo>
-        <Nav>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
-        </Nav>
-        <SocialMediaIcons>
-          {/* <SocialMediaIcon href={Bio.twitter} target="display">
-            {/* <TwitterIcon /> */}
-          {/* </SocialMediaIcon>  */}
-          {/* <SocialMediaIcon href={Bio.linkedin} target="display">
-            <LinkedInIcon />
-          </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display">
-            <InstagramIcon />
-          </SocialMediaIcon> */}
-        </SocialMediaIcons>
-        <Copyright>
-          &copy; 2023 Ruchita Sagalgile. All rights reserved.
-        </Copyright>
-      </FooterWrapper>
-    </FooterContainer>
+    <>
+      <FooterContainer>
+        <FooterWrapper>
+          <FooterCon>
+            <FooterSubContainer>
+              <h1 style={{ fontSize: "29px" }}>Mobipro</h1>
+              <div>
+                iPhone, iPod, iPad and Mac are registered trademarks of Apple,
+                Inc. MobiPro is an independent service company and is in no way
+                affiliated with Apple Inc.
+              </div>
+            </FooterSubContainer>
+            <FooterSubContainer>
+              <h1>Start your Repair</h1>
+              <div>
+                Stores Feedback Track Your Order Contact Us Warranty Claim Form
+                Brand Partnership Client Interest Preferred Partner Referral
+              </div>
+            </FooterSubContainer>
+            <FooterSubContainer>
+              <h1>Learn More</h1>
+              <div>
+                About Partnership Careers Franchising Term & Condition Retail
+                Partnership Corporate Tieups/ Gift Cards{" "}
+              </div>
+            </FooterSubContainer>
+            <FooterSubContainer>
+              <h1>Get the Newsletter</h1>
+              <div>
+                iPhone, iPod, iPad and Mac are registered trademarks of Apple,
+                Inc. MobiPro is an independent service company and is in no way
+                affiliated with Apple Inc.
+              </div>
+            </FooterSubContainer>
+          </FooterCon>
+        </FooterWrapper>
+      </FooterContainer>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "40px",
+          backgroundColor: "black",
+          color: "white",
+          textAlign: "center",
+          fontSize: "14px",
+          fontWeight: 400,
+          paddingTop: "8px",
+          cursor: "pointer",
+        }}
+      >
+        www.mobipro.com
+      </div>
+    </>
   );
 }
 

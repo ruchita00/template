@@ -8,6 +8,7 @@ import Support from "./components/Support";
 import Stores from "./components/Stores";
 import "./App.css";
 import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection/index.js";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -38,6 +39,7 @@ function App() {
       <Router>
         <Navbar />
         <Body>
+          <HeroSection />
           <Wrapper>
             <Support />
             <Stores />
